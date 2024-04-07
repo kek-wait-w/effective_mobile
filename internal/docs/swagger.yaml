@@ -1,0 +1,72 @@
+info:
+  contact: {}
+paths:
+  /api/v1/cars/delete/{id}:
+    delete:
+      description: Delete information about car by car id.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: successful removal"}}
+          schema:
+            type: json
+        "400":
+          description: Bad Request
+          schema:
+            type: json
+      summary: Delete car
+      tags:
+      - cars
+  /api/v1/cars/get:
+    get:
+      description: Get list of cars by filters.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: json
+        "400":
+          description: Bad Request
+          schema:
+            type: json
+      summary: Get cars list
+      tags:
+      - cars
+  /api/v1/cars/new:
+    post:
+      description: Add new cars with info about owner.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: successful post"}}
+          schema:
+            type: json
+        "400":
+          description: Bad Request
+          schema:
+            type: json
+      summary: Add new cars.
+      tags:
+      - cars
+  /api/v1/cars/update:
+    patch:
+      description: Update info about car by car id and params.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: json
+        "400":
+          description: Bad Request
+          schema:
+            type: json
+      summary: Update info
+      tags:
+      - cars
+swagger: "2.0"
